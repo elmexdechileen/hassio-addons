@@ -20,7 +20,7 @@ conn = tg.telnetGPIOHandler(msgBroker, msgBrokerPort, serviceName, gpioHost)
 conn.initializeConn()
 
 while(1 == 1):
-    #print(conn.newState)
+    print(conn.newState)
     conn.read()
     conn.updateBinary()
 
