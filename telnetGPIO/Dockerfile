@@ -3,6 +3,11 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
+# Install requirements for add-on
+RUN apk add --no-cache python3 &&\
+	python3 -m ensurepip && \
+	pip3 install paho-mqtt bitarray
+
 # Copy data for add-on
 COPY run.sh /
 ADD source /usr/opt/telnetmqtt
