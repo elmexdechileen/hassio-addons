@@ -1,1 +1,1 @@
-python3 /usr/opt/telnetmqtt/telnetGPIODaemon.py  $mqtthost $mqttport $servicename $gpiohost $refreshinterval
+python3 /usr/opt/telnetmqtt/telnetGPIODaemon.py  "$mqtthost" "$mqttport" "$servicename" "$gpiohost" "$refreshinterval"
