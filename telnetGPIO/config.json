@@ -5,6 +5,18 @@
   "description": "Reads the Numato home lab GPIO board via telnet and sends mqtt status updates",
   "startup": "before",
   "boot": "auto",
-  "options": {},
-  "schema": {}
+  "options": {
+	"mqtthost": "192.168.1.148",
+	"mqttport": 1883,
+	"servicename": "telnetA",
+	"gpiohost": "192.168.1.171",
+	"refreshinterval": .1  
+  },
+  "schema": {
+	"mqtthost": "str",
+	"mqttport": "int",
+	"servicename": "str",
+	"gpiohost": "str",
+	"refreshinterval": "int"
+  }
 }
