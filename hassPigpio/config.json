@@ -1,0 +1,22 @@
+{
+  "name": "PiGPIO",
+  "version": "1",
+  "slug": "telnet_gpio",
+  "description": "Runs a PGPIO daemon",
+  "startup": "before",
+  "boot": "auto",
+  "options": {
+	"mqtthost": "192.168.1.148",
+	"mqttport": 1883,
+	"servicename": "telnetA",
+	"gpiohost": "192.168.1.171",
+	"refreshinterval": .1  
+  },
+  "schema": {
+	"mqtthost": "str",
+	"mqttport": "int",
+	"servicename": "str",
+	"gpiohost": "str",
+	"refreshinterval": "int"
+  }
+}
