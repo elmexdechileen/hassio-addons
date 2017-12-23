@@ -1,7 +1,7 @@
 {
-  "name": "PiGPIO",
+  "name": "Hass Pigpio",
   "version": "1",
-  "slug": "telnet_gpio",
+  "slug": "hass_pgpio",
   "description": "Runs a PGPIO daemon",
   "startup": "before",
   "boot": "auto",
