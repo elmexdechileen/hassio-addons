@@ -11,10 +11,10 @@ if len(sys.argv) != 6:
 #serviceName = str(sys.argv[3])
 #gpioHost = str(sys.argv[4])
 
-msgBroker = "192.168.1.145"
+msgBroker = "10.0.0.10"
 msgBrokerPort = 1883
 serviceName = "telnetGPIO"
-gpioHost = "192.168.1.171"
+gpioHost = "10.0.0.30"
 
 conn = tg.telnetGPIOHandler(msgBroker, msgBrokerPort, serviceName, gpioHost)
 conn.initializeConn()
