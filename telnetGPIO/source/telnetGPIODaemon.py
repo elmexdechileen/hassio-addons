@@ -6,15 +6,15 @@ import sys
 if len(sys.argv) != 6:
     raise Exception("Not enough input arguments")
 
-#msgBroker = str(sys.argv[1])
-#msgBrokerPort = int(sys.argv[2])
-#serviceName = str(sys.argv[3])
-#gpioHost = str(sys.argv[4])
+msgBroker = str(sys.argv[1])
+msgBrokerPort = int(sys.argv[2])
+serviceName = str(sys.argv[3])
+gpioHost = str(sys.argv[4])
 
-msgBroker = "10.0.0.10"
-msgBrokerPort = 1883
-serviceName = "telnetGPIO"
-gpioHost = "10.0.0.30"
+#msgBroker = "10.0.0.10"
+#msgBrokerPort = 1883
+#serviceName = "telnetGPIO"
+#gpioHost = "10.0.0.30"
 
 conn = tg.telnetGPIOHandler(msgBroker, msgBrokerPort, serviceName, gpioHost)
 conn.initializeConn()
