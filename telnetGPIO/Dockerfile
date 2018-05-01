@@ -1,5 +1,7 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+#ARG BUILD_FROM
+#FROM $BUILD_FROM
+#FROM hassioaddons/base-amd64
+FROM hassioaddons/base-armhf
 
 ENV LANG C.UTF-8
 

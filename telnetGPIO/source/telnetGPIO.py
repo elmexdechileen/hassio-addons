@@ -1,5 +1,6 @@
 import asyncio
 import paho.mqtt.publish as publish
+import paho.mqqt.client as mqtt
 import telnetlib
 from bitarray import bitarray
 import binascii
@@ -10,6 +11,8 @@ class MqttChangeHandler:
         self._mqtthost = mqqthost
         self._mqttport = mqttport
         self._sender = sender
+		self._client = mqtt.Client()
+		self._client.Connect(str(mqqthost), mqttport)
 
     async def __aenter__(self):
         self._brokerHost = self._mqtthost
@@ -26,10 +29,12 @@ class MqttChangeHandler:
 
             for q in range(len(diff)):
                 if diff[q]:
-                    publish.single("home-assistant/" + self._sender + "/" + str((q + 1)),
-                                   payload=str(newState[(q)]),
-                                   hostname= str(self._brokerHost),
-                                   port=self._brokerPort)
+ 					self._client.publish("home-assistant/" + self._sender + "/" + str((q + 1)),
+                                   payload=str(newState[(q)]))                   
+					#publish.single("home-assistant/" + self._sender + "/" + str((q + 1)),
+                    #               payload=str(newState[(q)]),
+                    #               hostname= str(self._brokerHost),
+                    #               port=self._brokerPort)
             return True
         except:
             #print("Unexpected error:", sys.exc_info()[0])
