@@ -1,6 +1,6 @@
 {
   "name": "TelnetGPIO",
-  "version": "2.1",
+  "version": "2.2",
   "slug": "telnet_gpio",
   "description": "Reads the Numato home lab GPIO board via telnet and sends mqtt status updates",
   "startup": "before",
